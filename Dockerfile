@@ -25,6 +25,7 @@ RUN  curl -fSL -o /tmp/plugin.tar.gz \
     tar -xzf /tmp/plugin.tar.gz -C $KAFKA_CONNECT_PLUGINS_DIR &&\
     rm -f /tmp/plugin.tar.gz;
 
+COPY kafka/server.properties $KAFKA_HOME/config/server.properties
 
 EXPOSE 9092
 CMD $KAFKA_HOME/bin/kafka-server-start.sh $KAFKA_HOME/config/server.properties
