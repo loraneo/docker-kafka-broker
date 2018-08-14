@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker build -t loraneo/docker-kafka-broker:1.0.0a .
+docker build -t loraneo/docker-kafka-broker:2.0.0a .
