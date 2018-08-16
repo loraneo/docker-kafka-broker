@@ -15,5 +15,6 @@ COPY kafka/server.properties $KAFKA_HOME/config/server.properties
 
 EXPOSE 9092
 CMD $KAFKA_HOME/bin/kafka-server-start.sh $KAFKA_HOME/config/server.properties \
-	--override broker.id=${BROKER_ID}
+	--override broker.id=${BROKER_ID} \
+	--override advertised.listeners=PLAINTEXT://kafka-broker-${BROKER_ID}:9092
 
